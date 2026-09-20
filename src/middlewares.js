@@ -1,3 +1,5 @@
+import { error } from 'itty-router';
+
 const validateId = (req) => {
   const { id } = req.params;
   if (!/^[a-z0-9:.@_-]{1,256}$/i.test(id)) {

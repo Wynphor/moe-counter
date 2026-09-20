@@ -1,11 +1,9 @@
 name = "moe-counter"
 main = "dist/worker.js"
 compatibility_date = "2024-02-27"
-workers_dev = false
-
-[[routes]]
-pattern = "moe-counter.fwan9678.workers.dev"
-custom_domain = true
+# 使用默认 workers.dev：https://moe-counter.fwan9678.workers.dev
+# 不要对 *.workers.dev 使用 custom_domain（仅适用于自有域名）
+workers_dev = true
 
 [build]
 command = "npm run build"
